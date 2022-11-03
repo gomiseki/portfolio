@@ -13,12 +13,14 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "gatsby build && gh-pages -d public -b deploy"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.24.6",
     "gatsby-plugin-styled-components": "^5.24.0",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "styled-components": "^5.3.6"
