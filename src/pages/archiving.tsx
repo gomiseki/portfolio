@@ -1,13 +1,14 @@
 import React from 'react';
 import Layout from './layout';
 
-function IndexPage() {
+function Archiving() {
 
   return (
-    <Layout>
+    <Layout path="Archiving">
 
     </Layout>
+
   );
 }
 
-export default IndexPage;
+export default Archiving;

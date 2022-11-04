@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Draggable from 'react-draggable';
 import styled, { CSSProperties, ThemeProvider } from 'styled-components';
@@ -14,19 +14,20 @@ import profilePlate from '../images/profilePlate.png';
 import profile from '../images/profile.png';
 
 interface LayoutProps{
-  children: React.ReactNode
+  children: React.ReactNode,
+  path: string,
 }
 
 const navContent = [
   {
     name: 'About me',
-    selected: true,
+    selected: false,
     link: '/',
   },
   {
-    name: 'Tech',
+    name: 'Project',
     selected: false,
-    link: '/tech',
+    link: '/project',
   },
   {
     name: 'Archiving',
@@ -41,6 +42,7 @@ const navContent = [
 ];
 
 const Background = styled.div`
+  overflow: auto;
   background-image: url(${background});
   height: 100vh;
   display: flex;
@@ -184,6 +186,7 @@ const Light = styled.div`
   background-color: green;
   width: 8px;
   height: 8px;
+  margin-right: 3px;
   border: 2px solid lightgreen;
   border-radius: 100%;
 `;
@@ -199,12 +202,12 @@ const Main = styled.main`
 `;
 
 const Side = styled.aside`
-  background-color: black;
+  background: black cover;
   height: 100%;
   width: 220px;
 `;
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children, path = 'About me' }: LayoutProps) {
   const [navList, setnavList] = useState(navContent);
   const [, setPosition] = useState({ x: 0, y: 0 });
 
@@ -212,17 +215,17 @@ function Layout({ children }: LayoutProps) {
     setPosition({ x: data.x, y: data.y });
   };
 
-  const navClick = (name:string) => {
-    setnavList(navList.map((list) => ({ ...list, selected: Boolean(list.name === name) })));
-  };
+  useEffect(() => {
+    setnavList(navList.map((list) => ({ ...list, selected: Boolean(list.name === path) })));
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Background>
-        <Draggable bounds="parent" onDrag={(e, data) => trackPos(data)}>
+        <Draggable bounds="parent" handle="#handle" onDrag={(e, data) => trackPos(data)}>
           <Client>
-            <Nav>
+            <Nav id="handle">
               <ul style={{ display: 'flex', height: '100%', width: '1060px' }}>
                 <li style={{
                   width: '215px', display: 'flex', height: '100%', alignItems: 'center',
@@ -243,7 +246,6 @@ function Layout({ children }: LayoutProps) {
                   <NavLi key={name}>
                     <NavLink
                       to={link}
-                      onClick={() => navClick(name)}
                       activeStyle={activeStyle}
                     >
                       {selected && <Tip src={navtip} />}
