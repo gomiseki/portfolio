@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Draggable from 'react-draggable';
-import styled, { CSSProperties, ThemeProvider } from 'styled-components';
+import styled, { CSSProperties, ThemeProvider, keyframes } from 'styled-components';
 import GlobalStyle from '../styles/global-styles';
 import theme from '../styles/theme';
 
 import client from '../images/client.png';
-import background from '../images/screenshot.png';
+import background from '../images/test1.png';
 import logo from '../images/logo.webm';
 import play from '../images/play.webm';
 import navtip from '../images/navtip.png';
@@ -25,9 +25,9 @@ const navContent = [
     link: '/',
   },
   {
-    name: 'Project',
+    name: 'Projects',
     selected: false,
-    link: '/project',
+    link: '/projects',
   },
   {
     name: 'Archiving',
@@ -53,11 +53,23 @@ const Background = styled.div`
 const Client = styled.main`
   width: 1280px;
   height: 720px;
-  background-image: url(${client});
-  border-top: ${(props) => `1px solid ${props.theme.palette.border}`};
+  margin-top: 103px;
+  margin-left: 2px;
+  /* background-image: url(${client}); */
+  border-top: ${(props) => `3px solid ${props.theme.palette.border}`};
+`;
+
+const fadein = keyframes`
+  from {
+        opacity: 0;
+    }
+  to {
+      opacity: 1;
+  }
 `;
 
 const Nav = styled.nav`
+  box-sizing: border-box;
   display:flex;
   width: 100%;
   height: 80px;
@@ -131,7 +143,7 @@ const NavLink = styled(Link)`
 
 const Profile = styled.div`
   position:relative;
-  width: 220px;
+  width: 225px;
   display: flex;
   background-color:  black;
 `;
@@ -164,7 +176,8 @@ const LV = styled.p`
 `;
 
 const Description = styled.div`
-  padding-top: 33px;
+  padding-top: 25px;
+  padding-left: 5px;
 `;
 
 const Name = styled.p`
@@ -197,14 +210,16 @@ const Content = styled.div`
 `;
 
 const Main = styled.main`
-  height: 100%;
+  position: relative;
   width: 1060px;
+  animation: ${fadein} 1s;
 `;
 
 const Side = styled.aside`
-  background: black cover;
+  background-color: black;
+  background-size: cover;
+  width: 225px;
   height: 100%;
-  width: 220px;
 `;
 
 function Layout({ children, path = 'About me' }: LayoutProps) {

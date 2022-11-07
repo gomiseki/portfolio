@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "name": "Github",
+      "link": "gomi.dev175@gmail.com",
+      "description": "주로 개인 프로젝트 소스를 관리.\n학부 과제, KDT과정의 프로젝트, 알고리즘 풀이.\nOrganization 기능을 통한 스터디, 팀프로젝트.",
+      "logoFilter": " invert(89%) sepia(25%) saturate(381%) hue-rotate(212deg) brightness(110%) contrast(97%)",
+      "backgroundColor": "",
+      "backgroundImage": "galaxy",
+      "logoImage": "github"
+    },
+    {
+      "name": "Velog",
+      "link": "https://velog.io/@gomiseki",
+      "description": "주로 프로젝트 개발기를 포스팅.\n코딩 중 겪었던 어려움, 새로 배운 점 등을 기록.\n「Footer 하단고정」 이라는 글이 성황리 판매중.",
+      "logoFilter": "",
+      "backgroundColor": "#20C997",
+      "backgroundImage": "",
+      "logoImage": "velog"
+    }
+  ]
+}

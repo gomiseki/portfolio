@@ -7,6 +7,7 @@ declare module 'styled-components'{
             borderDark:string,
             fontColor: string,
             fontColorLight: string,
+            fontSky: string,
         },
         devices: {
             desktop: string,

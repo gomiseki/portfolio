@@ -11,6 +11,7 @@ const theme: DefaultTheme = {
     borderDark: '#32281e',
     fontColor: '#cdbe91',
     fontColorLight: '#ede3cf',
+    fontSky: '#f7f8fc',
   },
 
   devices: {
