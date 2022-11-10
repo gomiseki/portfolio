@@ -8,6 +8,7 @@ const size = {
 const theme: DefaultTheme = {
   palette: {
     border: '#8d6d2d',
+    borderMiddle: '#745726',
     borderDark: '#32281e',
     fontColor: '#cdbe91',
     fontColorLight: '#ede3cf',

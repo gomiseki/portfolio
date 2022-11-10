@@ -25,10 +25,10 @@
     "gatsby-plugin-styled-components": "^5.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gh-pages": "^4.0.0",
-    "polished": "^4.2.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-draggable": "^4.4.5",
+    "react-tooltip": "^4.5.0",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2"
   },

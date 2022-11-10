@@ -26,6 +26,14 @@ const GlobalStyle = createGlobalStyle`
     font-weight: medium;
     margin: 15px;
   }
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+      background-color: #745726;
+      border-radius: 4px;
+  }
 `;
 
 export default GlobalStyle;

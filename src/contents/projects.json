@@ -4,117 +4,127 @@
       "name": "YTB-Recoder",
       "period": "2022",
       "description": "유튜브에서 레코딩을 할 수 있는 크롬 익스텐션 앱",
-      "role":["제작 총괄"],
+      "role":["title/제작 총괄"],
       "experience":[
-        "Vanilla JS로 구현된 앱을 ReactJS기반으로 리팩토링",
-        "크롬 익스텐션 앱에 대한 것과 mediaStream객체, getUsermedia, mediaCapture 등 API 사용법 등 학습"
+        "·/Vanilla JS로 구현된 앱을 ReactJS기반으로 리팩토링",
+        "·/크롬 익스텐션 앱에 대한 것과 mediaStream객체, getUsermedia, mediaCapture 등 API 사용법 등 학습"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/YTB-Recorder",
+      "archive": "https://velog.io/@gomiseki/Youtube-Recorder-rebuild-%E3%85%A0%E3%85%A0",
       "download": "",
-      "tech": ["react", "javascript"],
-      "logo": "redord",
+      "tech": ["ReactJS", "HTML", "CSS", "Javascript", "Github"],
+      "logo": "record",
       "test": "ytrecordertest"
     },
     {
       "name": "B-singroom",
       "period": "2021~2022",
-      "description": "유튜브 플레이 리스트를 공유할 수 있는 음성,문자채팅 데스크톱 앱",
+      "description": "유튜브 플레이 리스트를 공유하는 음성, 문자채팅 데스크톱 앱",
       "role": [
-        "팀장 및 프로젝트 매니저로서 PR승인 등의 프로젝트 관리자",
-        "클라이언트, 서버 코드 개발",
-        "클라이언트 코드 리팩토링"
+        "·/팀장 및 프로젝트 매니저로서 PR승인 등의 프로젝트 관리자",
+        "·/클라이언트, 서버 코드 개발",
+        "·/클라이언트 코드 리팩토링"
       ],
       "experience": [
-        "「소프트웨어 공학」교과목의 과제로 단기간 다수 스택 학습",
-        "크로스 브라우징 및 장치권한 제어 리스크를 줄이기 위해 Electron 채택",
-        "소켓 프로그래밍부터 WebRTC까지 클라이언트와 서버코드를 총괄"
+        "·/「소프트웨어 공학」교과목의 과제로 단기간 다수 스택 학습",
+        "·/크로스 브라우징 및 장치권한 제어 리스크를 줄이기 위해 Electron 채택",
+        "·/소켓 프로그래밍부터 WebRTC까지 클라이언트와 서버코드를 총괄"
       ],
       "team": "김주현 외 4명",
       "source": "https://github.com/HUFS-SWE",
+      "archive": "https://velog.io/@gomiseki/series/Bsingroom-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
       "download": "",
       "tech": [
-        "react",
-        "javascript",
-        "electron",
-        "webrtc",
-        "socketdotio",
-        "styledcomponents"
+        "ReactJS",
+        "Javascript",
+        "ElectronJS",
+        "ExpressJS",
+        "WebRTC",
+        "SocketIO",
+        "StyledComponents",
+        "Github"
       ],
       "logo": "bsingroom",
-      "test": "bisingoomtest"
+      "test": "bsingroomtest"
     },
     {
       "name": "Rabbit-Hole",
       "period": "2022",
       "description": "엘리스 레이서 지망생 및 수강생의 정보 공유 및 네트워킹을 위한 커뮤니티 서비스",
       "role": [
-        "클라이언트 코드 및 배포 인프라",
-        "1. 공통 컴포넌트 제작(Sidebar, Pagination, MarkdownEditor, MarkdownViewer)",
-        "· 페이지네이션 알고리즘이 적용된 pagination컴포넌트",
-        "· 게시판, mypage에 동적으로 호환가능한 sidebar",
-        "· 이미지 업로드 시 url로 전환하는 toast UI의 markdown 에디터",
-        "2. Github OAuth Page 구현",
-        "· new window 방식 로그인 구현",
-        "· expire기간에 따른 자동 로그아웃",
-        "· recoil을 통한 전역 커스텀 훅",
-        "3. Admin Page 제작",
-        "4. 채팅 구현",
-        "· Socket.io-client 모듈을 사용한 채팅구현",
-        "· Context API로 소켓 객체 전역관리",
-        "5. 프론트엔드 이미지 빌드",
-        "· Dockerfile 및 nginx conf 세팅(ssl)"
+        "title/클라이언트 코드 및 배포 인프라",
+        "1/공통 컴포넌트 제작(Sidebar, Pagination, MarkdownEditor, MarkdownViewer)",
+        "·/페이지네이션 알고리즘이 적용된 pagination컴포넌트",
+        "·/게시판, mypage에 동적으로 호환가능한 sidebar",
+        "·/이미지 업로드 시 url로 전환하는 toast UI의 markdown 에디터",
+        "2/Github OAuth Page 구현",
+        "·/new window 방식 로그인 구현",
+        "·/expire기간에 따른 자동 로그아웃",
+        "·/recoil을 통한 전역 커스텀 훅",
+        "3/Admin Page 제작",
+        "4/채팅 구현",
+        "·/Socket.io-client 모듈을 사용한 채팅구현",
+        "·/Context API로 소켓 객체 전역관리",
+        "5/프론트엔드 이미지 빌드",
+        "·/Dockerfile 및 nginx conf 세팅(ssl)"
       ],
       "experience": [
-        "서버 개발자들과 다양한 소통을 경험하려 노력했습니다.",
-        "· API 문서 작성",
-        "· Git Flow 구축",
-        "· 팀 평가 최고점 기록(코드품질)"
+        "title/서버 개발자들과 다양한 소통을 경험하려 노력했습니다.",
+        "·/API 문서 작성",
+        "·/Git Flow 구축",
+        "·/팀 평가 최고점 기록(코드품질)"
       ],
       "team": "김주현 외 4명",
       "source": "https://github.com/gomiseki/Rabbit-Hole",
+      "archive": "",
       "download": "",
       "tech": [
-        "react",
-        "typescript",
-        "styledcomponents",
-        "socketdotio",
-        "nginx",
-        "docker",
-        "vite",
-        "recoil",
-        "reactquery",
-        "gitlab"
+        "ReactJS",
+        "Typescript",
+        "StyledComponents",
+        "SocketIO",
+        "Nginx",
+        "Docker",
+        "Vite",
+        "Recoil",
+        "ReactQuery",
+        "Gitlab",
+        "Figma",
+        "Postman",
+        "AWS"
       ],
       "logo": "rabbithole",
-      "test": "bisingoomtest"
+      "test": "rabbitholetest"
     },
     {
       "name": "너 쌩배지! - 닷지경보기",
       "period": "2022",
       "description": "리그오브레전드 게임의 클라이언트 프로그램에 오버레이하여, 실시간으로 전적을 분석해주는 데스크톱 앱",
       "role": [
-        "제작 총괄"
+        "title/제작 총괄"
       ],
       "experience": [
-        "· Redux의 낮은 플랫폼 의존성을 활용하여 애플리케이션 윈도우(프로세스)간 전역 상태 관리 시스템을 구축",
-        "· TypeScript를 활용한 복잡성이 높은 api 데이터 스키마에 대한 안정적인 처리",
-        "· 대량 Promise의 안정적 처리",
-        "· 프로그램 제작 중 프로그램의 사형선고",
-        "· LCU 및 Riot API를 사용한 게임 데이터를 분석",
-        "· SVG 도넛 차트를 통한 시각화를 제공"
+        "·/Redux의 낮은 플랫폼 의존성을 활용하여 애플리케이션 윈도우(프로세스)간 전역 상태 관리 시스템을 구축",
+        "·/TypeScript를 활용한 복잡성이 높은 api 데이터 스키마에 대한 안정적인 처리",
+        "·/대량 Promise의 안정적 처리",
+        "·/프로그램 제작 중 프로그램의 사형선고",
+        "·/LCU 및 Riot API를 사용한 게임 데이터를 분석",
+        "·/SVG 도넛 차트를 통한 시각화를 제공"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/YTB-Recorder",
+      "archive": "https://velog.io/@gomiseki/series/%EB%84%88-%EC%8C%A9%EB%B0%B0%EC%A7%80%EB%A6%AC%EA%B7%B8%EC%98%A4%EB%B8%8C%EB%A0%88%EC%A0%84%EB%93%9C-%EB%8B%B7%EC%A7%80-%EA%B2%BD%EB%B3%B4%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
       "download": "https://github.com/gomiseki/Dodge-Alarm/releases/download/v1.0.0-beta/Dodge-Alarm.Setup.1.0.0-beta.exe",
       "tech": [
-        "electron",
-        "redux",
-        "typescript",
-        "react",
-        "styledcomponents",
-        "vite",
-        "riotgames"
+        "ElectronJS",
+        "Redux",
+        "Typescript",
+        "ReactJS",
+        "StyledComponents",
+        "Vite",
+        "RiotAPI",
+        "Github"
       ],
       "logo": "youssangbae",
       "test": "youssangbaetest"
@@ -124,22 +134,24 @@
       "period": "2022",
       "description": "리그오브레전드의 클라이언트 디자인을 카피한 개성넘치는 포트폴리오",
       "role": [
-        "제작 총괄"
+        "title/제작 총괄"
       ],
       "experience": [
-        "· 바탕화면이 드러나는 의미있는 디자인",
-        "· GatsbyJS를 사용한 json to template 형식의 정적 사이트",
-        "· GraphQl 맛보기"
+        "·/바탕화면이 드러나는 의미있는 디자인",
+        "·/GatsbyJS를 사용한 json to template 형식의 정적 사이트",
+        "·/GraphQl 맛보기"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/portfolio",
+      "archive": "",
       "download": "",
       "tech": [
-        "gatsby",
-        "typescript",
-        "react",
-        "styledcomponents",
-        "graphql"
+        "GatsbyJS",
+        "Typescript",
+        "ReactJS",
+        "StyledComponents",
+        "GraphQL",
+        "Github"
       ],
       "logo": "portfolio",
       "test": ""

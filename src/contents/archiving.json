@@ -2,7 +2,7 @@
   "data": [
     {
       "name": "Github",
-      "link": "gomi.dev175@gmail.com",
+      "link": "https://github.com/gomiseki",
       "description": "주로 개인 프로젝트 소스를 관리.\n학부 과제, KDT과정의 프로젝트, 알고리즘 풀이.\nOrganization 기능을 통한 스터디, 팀프로젝트.",
       "logoFilter": " invert(89%) sepia(25%) saturate(381%) hue-rotate(212deg) brightness(110%) contrast(97%)",
       "backgroundColor": "",
