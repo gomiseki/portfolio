@@ -4,6 +4,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import Layout from './layout';
 import GlittingBox from '../components/glittingBox';
+import SEO from '../components/seo';
 
 import teemo from '../images/teemoCheers.png';
 
@@ -116,3 +117,8 @@ function Archiving() {
 }
 
 export default Archiving;
+
+export function Head() {
+  // @ts-ignore
+  return <SEO />;
+}

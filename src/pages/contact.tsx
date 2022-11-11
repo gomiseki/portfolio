@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from './layout';
 
+import SEO from '../components/seo';
+
 import penguinKiss from '../images/penguin_kiss.png';
 
 import contents from '../contents/contact.json';
@@ -63,3 +65,8 @@ function Contact() {
 }
 
 export default Contact;
+
+export function Head() {
+  // @ts-ignore
+  return <SEO />;
+}

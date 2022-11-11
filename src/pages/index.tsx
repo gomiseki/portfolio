@@ -6,6 +6,8 @@ import Layout from './layout';
 import aboutme from '../contents/aboutme.json';
 import avatar from '../images/profile.png';
 
+import SEO from '../components/seo';
+
 const Container = styled.div`
 `;
 
@@ -180,3 +182,8 @@ function IndexPage() {
 }
 
 export default IndexPage;
+
+export function Head() {
+  // @ts-ignore
+  return <SEO />;
+}

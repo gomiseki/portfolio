@@ -13,6 +13,8 @@ import navtip from '../images/navtip.png';
 import profilePlate from '../images/profilePlate.png';
 import profile from '../images/profile.png';
 
+import SEO from '../components/seo';
+
 interface LayoutProps{
   children: React.ReactNode,
   path: string,
@@ -295,3 +297,8 @@ function Layout({ children, path = 'About me' }: LayoutProps) {
 }
 
 export default Layout;
+
+export function Head() {
+  // @ts-ignore
+  return <SEO />;
+}

@@ -8,6 +8,7 @@ import TechBox from '../components/techBox';
 import Tooltip from '../components/tooltip';
 import Works from '../components/workBox';
 import Work from '../components/projectBox';
+import SEO from '../components/seo';
 
 import projects from '../contents/projects.json';
 
@@ -333,3 +334,8 @@ function Project() {
 }
 
 export default Project;
+
+export function Head() {
+  // @ts-ignore
+  return <SEO />;
+}
