@@ -13,7 +13,6 @@ const Container = styled.div`
 
 const Content = styled.div`
   box-sizing: border-box;
-  border: 1px solid black;
   height: 615px;
   padding:50px;
 `;
