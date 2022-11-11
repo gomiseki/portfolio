@@ -7,7 +7,7 @@ import Layout from './layout';
 import TechBox from '../components/techBox';
 import Tooltip from '../components/tooltip';
 import Works from '../components/workBox';
-import Work from '../components/ProjectBox';
+import Work from '../components/projectBox';
 
 import projects from '../contents/projects.json';
 
