@@ -6,7 +6,7 @@ import GlobalStyle from '../styles/global-styles';
 import theme from '../styles/theme';
 
 import client from '../images/client.png';
-import background from '../images/test3.png';
+import background from '../images/screenshot.png';
 import logo from '../images/logo.webm';
 import play from '../images/play.webm';
 import navtip from '../images/navtip.png';
@@ -53,7 +53,6 @@ const Background = styled.div`
 const Client = styled.main`
   width: 1280px;
   height: 720px;
-  margin-top: 103px;
   margin-left: 2px;
   background-image: url(${client});
   border-top: ${(props) => `3px solid ${props.theme.palette.border}`};

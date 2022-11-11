@@ -218,7 +218,6 @@ function Project() {
 
   useEffect(() => {
     if (data) {
-      console.log(data);
       const techObj:{[index:string]:any} = {};
       const projectArr = selected.skill ? projects.data.filter((project) => project.tech.includes(selected.skill)) : [...projects.data];
       const totalObj:{[index: string]: any} = {
@@ -245,7 +244,6 @@ function Project() {
           if (classify[value].includes(name)) totalObj[value] += 1;
         });
       });
-      console.log(projectArr);
       setTechData(techObj);
       setProjectData(projectArr);
       setTotalData(totalObj);

@@ -16,6 +16,7 @@ const Content = styled.div`
 `;
 
 const Container = styled.div`
+  box-sizing: border-box;
   width: 100%;
   padding: 50px;
   display: flex;
