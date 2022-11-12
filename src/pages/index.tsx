@@ -11,10 +11,20 @@ import SEO from '../components/seo';
 const Container = styled.div`
 `;
 
+const Intro = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bolder;
+  color: ${({ theme }) => theme.palette.fontSky};
+  height: 50px;
+`;
+
 const Content = styled.div`
   box-sizing: border-box;
-  height: 615px;
-  padding:50px;
+  height: 565px;
+  padding: 20px 50px 50px 50px;
 `;
 
 const FlexBox = styled.div`
@@ -73,6 +83,7 @@ const itemStyle: CSSProperties = {
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
+  overflowY: 'auto',
 };
 
 const EduContainer = styled.div`
@@ -145,6 +156,7 @@ function IndexPage() {
             </Tab>
           ))}
         </Nav>
+        <Intro>안녕하세요~ 신입 개발자 Gomi의 포트폴리오 사이트입니다!</Intro>
         <Content>
           {tab && (tab === 'intro' ? (
             <FlexBox>
