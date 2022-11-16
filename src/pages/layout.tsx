@@ -6,7 +6,6 @@ import GlobalStyle from '../styles/global-styles';
 import theme from '../styles/theme';
 
 import client from '../images/client.webp';
-import background from '../images/screenshot.webp';
 import logo from '../images/logo.webm';
 import play from '../images/play.webm';
 import navtip from '../images/navtip.png';
@@ -47,7 +46,7 @@ const Background = styled.div`
   overflow: auto;
   width: 100vw;
   height: 100vh;
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;
