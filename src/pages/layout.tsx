@@ -5,13 +5,13 @@ import styled, { CSSProperties, ThemeProvider, keyframes } from 'styled-componen
 import GlobalStyle from '../styles/global-styles';
 import theme from '../styles/theme';
 
-import client from '../images/client.png';
-import background from '../images/screenshot.png';
+import client from '../images/client.webp';
+import background from '../images/screenshot.webp';
 import logo from '../images/logo.webm';
 import play from '../images/play.webm';
 import navtip from '../images/navtip.png';
 import profilePlate from '../images/profilePlate.png';
-import profile from '../images/profile.png';
+import profile from '../images/profile.webp';
 
 import SEO from '../components/seo';
 

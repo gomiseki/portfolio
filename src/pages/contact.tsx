@@ -5,7 +5,7 @@ import Layout from './layout';
 
 import SEO from '../components/seo';
 
-import penguinKiss from '../images/penguin_kiss.png';
+import penguinKiss from '../images/penguin_kiss.webp';
 
 import contents from '../contents/contact.json';
 

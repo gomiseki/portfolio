@@ -6,7 +6,7 @@ import Layout from './layout';
 import GlittingBox from '../components/glittingBox';
 import SEO from '../components/seo';
 
-import teemo from '../images/teemoCheers.png';
+import teemo from '../images/teemoCheers.webp';
 
 import contents from '../contents/archiving.json';
 

@@ -4,7 +4,7 @@ import styled, { CSSProperties } from 'styled-components';
 import Layout from './layout';
 
 import aboutme from '../contents/aboutme.json';
-import avatar from '../images/profile.png';
+import avatar from '../images/profile.webp';
 
 import SEO from '../components/seo';
 
