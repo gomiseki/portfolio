@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
+import background from '../images/screenshot.webp';
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
-  html, body{
+  body{
+    background-image: url(${background});
   }
   a{
     text-decoration: none;

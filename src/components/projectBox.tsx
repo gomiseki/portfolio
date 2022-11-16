@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import styled, { CSSProperties } from 'styled-components';
 import { Link } from 'gatsby';
 import { ProjectType } from '../types/projectType';
 
 import CustomMD from './customMd';
+import Loading from './loading';
 
 import github from '../images/tech/Github.svg';
 import velog from '../images/velog.svg';
 import electron from '../images/tech/ElectronJS.svg';
+
+const LazyImages = lazy(() => import('./lazyImages'));
 
 const Container = styled.div`
   width: 100%;
@@ -18,10 +21,6 @@ const Container = styled.div`
   padding: 40px;
   font-weight: bold;
 `;
-
-const videoStyle:CSSProperties = {
-  width: '100%',
-};
 
 const Description = styled.p`
   margin: 10px;
@@ -91,15 +90,9 @@ const Making = styled.p`
 export default function Work({ data, test }: { data: ProjectType, test:string }) {
   return (
     <Container>
-      {test && ((test.split('.')[1] === 'mp4') || (test.split('.')[1] === 'webm')
-        ? (
-          <video style={videoStyle} autoPlay loop muted>
-            <source src={test} />
-          </video>
-        )
-        : (
-          <img style={videoStyle} src={test} alt="" />
-        ))}
+      <Suspense fallback={<Loading />}>
+        <LazyImages test={test} />
+      </Suspense>
       <Description>{data.description}</Description>
       <ButtonContainer>
         {data.source
