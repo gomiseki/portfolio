@@ -6,7 +6,6 @@ import GlobalStyle from '../styles/global-styles';
 import theme from '../styles/theme';
 
 import client from '../images/client.webp';
-import background from '../images/screenshot.webp';
 import logo from '../images/logo.webm';
 import play from '../images/play.webm';
 import navtip from '../images/navtip.png';
@@ -46,8 +45,7 @@ const navContent = [
 
 const Background = styled.div`
   overflow: auto;
-  background-image: url(${background});
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -240,62 +238,60 @@ function Layout({ children, path = 'About me' }: LayoutProps) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Suspense fallback={<Loading body />}>
-        <Background>
-          <Draggable bounds="parent" handle="#handle" onDrag={(e, data) => trackPos(data)}>
-            <Client>
-              <Nav id="handle">
-                <ul style={{ display: 'flex', height: '100%', width: '1060px' }}>
-                  <li style={{
-                    width: '215px', display: 'flex', height: '100%', alignItems: 'center',
-                  }}
-                  >
-                    <StartVideo>
-                      <LogoContainer />
-                      <video style={logoStyle} autoPlay loop muted>
-                        <source src={logo} type="video/webm" />
-                      </video>
-                      <video style={playStyle} autoPlay loop muted>
-                        <source src={play} type="video/webm" />
-                      </video>
-                      <Logo>Gomi</Logo>
-                    </StartVideo>
-                  </li>
-                  {navList.map(({ name, link, selected }) => (
-                    <NavLi key={name}>
-                      <NavLink
-                        to={link}
-                        activeStyle={activeStyle}
-                      >
-                        {selected && <Tip src={navtip} />}
-                        {name}
-                      </NavLink>
-                    </NavLi>
-                  ))}
-                </ul>
-                <Profile>
-                  <ProfilePlate src={profilePlate} />
-                  <ProfileIcon src={profile} />
-                  <LV>1</LV>
-                  <Description>
-                    <Name>김주현</Name>
-                    <State>
-                      <Light />
-                      구직중
-                    </State>
-                  </Description>
-                </Profile>
-              </Nav>
-              <Content>
-                <Main>
-                  {children}
-                </Main>
-                <Side />
-              </Content>
-            </Client>
-          </Draggable>
-        </Background>
-      </Suspense>
+      <Background>
+        <Draggable bounds="parent" handle="#handle" onDrag={(e, data) => trackPos(data)}>
+          <Client>
+            <Nav id="handle">
+              <ul style={{ display: 'flex', height: '100%', width: '1060px' }}>
+                <li style={{
+                  width: '215px', display: 'flex', height: '100%', alignItems: 'center',
+                }}
+                >
+                  <StartVideo>
+                    <LogoContainer />
+                    <video style={logoStyle} autoPlay loop muted>
+                      <source src={logo} type="video/webm" />
+                    </video>
+                    <video style={playStyle} autoPlay loop muted>
+                      <source src={play} type="video/webm" />
+                    </video>
+                    <Logo>Gomi</Logo>
+                  </StartVideo>
+                </li>
+                {navList.map(({ name, link, selected }) => (
+                  <NavLi key={name}>
+                    <NavLink
+                      to={link}
+                      activeStyle={activeStyle}
+                    >
+                      {selected && <Tip src={navtip} alt={name} />}
+                      {name}
+                    </NavLink>
+                  </NavLi>
+                ))}
+              </ul>
+              <Profile>
+                <ProfilePlate src={profilePlate} alt="plate" />
+                <ProfileIcon src={profile} alt="profile" />
+                <LV>1</LV>
+                <Description>
+                  <Name>김주현</Name>
+                  <State>
+                    <Light />
+                    구직중
+                  </State>
+                </Description>
+              </Profile>
+            </Nav>
+            <Content>
+              <Main>
+                {children}
+              </Main>
+              <Side />
+            </Content>
+          </Client>
+        </Draggable>
+      </Background>
     </ThemeProvider>
   );
 }

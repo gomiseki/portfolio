@@ -46,7 +46,7 @@ function Contact() {
       <Container>
         <h1>Contact</h1>
         {contents.data.map(({ name, value, image }) => (
-          <List>
+          <List key={name}>
             <img
               alt={name}
               src={data.allFile.nodes
@@ -58,7 +58,7 @@ function Contact() {
         ))}
         <h2 style={{ alignSelf: 'flex-end', marginRight: '50px' }}>좋은 하루 되세요~</h2>
       </Container>
-      <EmoLogo src={penguinKiss} />
+      <EmoLogo src={penguinKiss} alt="penguinKiss" />
     </Layout>
 
   );

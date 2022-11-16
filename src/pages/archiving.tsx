@@ -82,7 +82,7 @@ function Archiving() {
         <h1 style={{ marginBottom: '50px' }}>Archiving</h1>
         <Content>
           {contents.data.map((content) => (
-            <GlittingBox>
+            <GlittingBox key={content.name}>
               <Link to={content.link} target="_blank">
                 <ContentBox
                   backgroundColor={content.backgroundColor}
@@ -95,6 +95,7 @@ function Archiving() {
                   }}
                   >
                     <Logo
+                      alt={content.logoImage}
                       src={
                         data.allFile.nodes
                           .find((node: any) => node.name === content.logoImage)
@@ -109,7 +110,7 @@ function Archiving() {
             </GlittingBox>
           ))}
         </Content>
-        <EmoLogo src={teemo} />
+        <EmoLogo alt="teemo" src={teemo} />
       </Container>
     </Layout>
 

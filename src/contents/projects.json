@@ -1,11 +1,13 @@
 {
-  "data":[
+  "data": [
     {
       "name": "YTB-Recoder",
       "period": "2022",
       "description": "유튜브에서 레코딩을 할 수 있는 크롬 익스텐션 앱",
-      "role":["title/제작 총괄"],
-      "experience":[
+      "role": [
+        "title/제작 총괄"
+      ],
+      "experience": [
         "·/Vanilla JS로 구현된 앱을 ReactJS기반으로 리팩토링",
         "·/크롬 익스텐션 앱 제작",
         "·/mediaStream객체, getUsermedia, mediaCapture 등 WEB API학습"
@@ -14,7 +16,13 @@
       "source": "https://github.com/gomiseki/YTB-Recorder",
       "archive": "https://velog.io/@gomiseki/Youtube-Recorder-rebuild-%E3%85%A0%E3%85%A0",
       "download": "",
-      "tech": ["ReactJS", "HTML", "CSS", "Javascript", "Github"],
+      "tech": [
+        "ReactJS",
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Github"
+      ],
       "logo": "record",
       "test": "ytrecordertest"
     },
@@ -140,7 +148,8 @@
       "experience": [
         "·/바탕화면이 드러나는 의미있는 디자인",
         "·/GatsbyJS를 사용한 json to template 형식의 정적 사이트",
-        "·/GraphQl 맛보기"
+        "·/GraphQl 을 통한 정적 파일의 동적 적재",
+        "·/Github Actions를 활용한 배포 자동화"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/portfolio",

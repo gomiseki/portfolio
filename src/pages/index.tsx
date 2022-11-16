@@ -158,7 +158,7 @@ function IndexPage() {
       <Container>
         <Nav>
           {Object.keys(aboutme).map((path) => (
-            <Tab selected={tab === path} onClick={() => onNavClick(path)}>
+            <Tab key={path} selected={tab === path} onClick={() => onNavClick(path)}>
               {path}
             </Tab>
           ))}
@@ -170,7 +170,7 @@ function IndexPage() {
               <div style={itemStyle}><AvatarContainer><Avatar src={avatar} alt="avatar" /></AvatarContainer></div>
               <div style={itemStyle}>
                 {Object.keys(aboutme[tab]).map((data) => (
-                  <Text>
+                  <Text key={data}>
                     {data !== 'Comment' && <Title>{data}</Title>}
                     {
                     // @ts-ignore
@@ -183,7 +183,7 @@ function IndexPage() {
           ) : (
             <EduContainer>
               {aboutme.timeline.map((data) => (
-                <Edu>
+                <Edu key={data.name}>
                   <Period>{data.period}</Period>
                   <School>
                     <Name>{data.name}</Name>

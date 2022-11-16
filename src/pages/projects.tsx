@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
-import React, { useEffect, useState, useRef } from 'react';
+import React, {
+  useEffect, useState, useRef,
+} from 'react';
 import styled from 'styled-components';
 
 import { useStaticQuery, graphql } from 'gatsby';
@@ -17,7 +19,7 @@ import { ProjectType } from '../types/projectType';
 
 const classify:{[index:string]:any} = {
   frontend: ['HTML', 'CSS', 'Javascript', 'Typescript', 'GatsbyJS', 'ReactJS', 'ReactQuery', 'Recoil', 'Redux', 'StyledComponents', 'Vite'],
-  backend: ['Express', 'GraphQL', 'MongoDB'],
+  backend: ['ExpressJS', 'GraphQL', 'MongoDB'],
   desktop: ['ElectronJS'],
   version: ['Github', 'Gitlab'],
   deploy: ['AWS', 'Docker'],
@@ -278,14 +280,14 @@ function Project() {
             }}
             >
               {Object.keys(classify).map((key) => (
-                <Classify>
+                <Classify key={key}>
                   <Title>{key}</Title>
                   <TechGrid>
                     {Object.keys(techData).map((name: string, index) => {
                       if (!index)gridKey.current = 0;
                       if (classify[key].includes(name)) gridKey.current += 1;
                       return classify[key].includes(name)
-                        && <Tooltip direction={gridKey.current % 4 === 0 ? 'left' : 'right'} special={false} text={name}><TechBox selected={name === selected.skill} onClick={() => { onClickSkill(name); }} src={techData[name].src} /></Tooltip>;
+                        && <Tooltip key={name} direction={gridKey.current % 4 === 0 ? 'left' : 'right'} special={false} text={name}><TechBox selected={name === selected.skill} onClick={() => { onClickSkill(name); }} src={techData[name].src} /></Tooltip>;
                     })}
                   </TechGrid>
                 </Classify>
@@ -295,7 +297,7 @@ function Project() {
           <BottomShadow />
           <Total>
             {Object.keys(totalData).map((name) => (
-              <TotalInfo>
+              <TotalInfo key={name}>
                 <Tooltip special={false} text={name}>
                   <TotalName>{name.split('')[0].toUpperCase()}</TotalName>
                 </Tooltip>
@@ -320,6 +322,7 @@ function Project() {
               )
               : projectData.map((info) => (
                 <Works
+                  key={info.name}
                   data={info}
                   onClick={() => { onClickProject(info.name); }}
                   src={data.allFile.nodes.find((node: any) => node.name === info.logo).publicURL}
