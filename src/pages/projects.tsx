@@ -19,7 +19,7 @@ import { ProjectType } from '../types/projectType';
 
 const classify:{[index:string]:any} = {
   frontend: ['HTML', 'CSS', 'Javascript', 'Typescript', 'GatsbyJS', 'ReactJS', 'ReactQuery', 'Recoil', 'Redux', 'StyledComponents', 'Vite'],
-  backend: ['Express', 'GraphQL', 'MongoDB'],
+  backend: ['ExpressJS', 'GraphQL', 'MongoDB'],
   desktop: ['ElectronJS'],
   version: ['Github', 'Gitlab'],
   deploy: ['AWS', 'Docker'],
