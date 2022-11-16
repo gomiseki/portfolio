@@ -91,7 +91,7 @@ const Making = styled.p`
 export default function Work({ data, test }: { data: ProjectType, test:string }) {
   return (
     <Container>
-      {test && ((test.split('.')[1] === 'mp4')
+      {test && ((test.split('.')[1] === 'mp4') || (test.split('.')[1] === 'webm')
         ? (
           <video style={videoStyle} autoPlay loop muted>
             <source src={test} />
