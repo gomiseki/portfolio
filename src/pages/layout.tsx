@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Draggable from 'react-draggable';
 import styled, { CSSProperties, ThemeProvider, keyframes } from 'styled-components';
@@ -12,7 +12,6 @@ import navtip from '../images/navtip.png';
 import profilePlate from '../images/profilePlate.png';
 import profile from '../images/profile.webp';
 
-import Loading from '../components/loading';
 import SEO from '../components/seo';
 
 interface LayoutProps{
