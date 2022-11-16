@@ -44,7 +44,7 @@ export default function TechBox({ src, onClick, selected }
           <source src={loop} type="video/webm" />
         </video>
       )}
-      <Icon src={src} />
+      <Icon src={src} loading="lazy" alt={src} />
     </Container>
 
   );

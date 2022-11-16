@@ -76,7 +76,7 @@ export default function Tooltip({
     <Container onMouseOver={() => setOver(true)} onMouseLeave={() => setOver(false)}>
       {over && (
       <Tip direction={direction}>
-        <Caret special={special} />
+        <Caret special={special} alt="caret" />
         <Text direction={direction} special={special}>
           {special && <DecoLine />}
           {title && <Title>{title}</Title>}

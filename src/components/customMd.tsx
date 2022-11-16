@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const MDTitle = styled.p`
+const MDTitle = styled.h4`
   width: 100%;
   color: ${({ theme }) => theme.palette.fontColorLight};
   font-size: large;
@@ -9,7 +9,7 @@ const MDTitle = styled.p`
   margin: 10px;
 `;
 
-const MDOl = styled.p`
+const MDOl = styled.h4`
   margin: 20px;
   font-size: medium;
   font-weight: bold;
@@ -18,7 +18,7 @@ const MDOl = styled.p`
   color: ${({ theme }) => theme.palette.fontColor};
 `;
 
-const MDUl = styled.p`
+const MDUl = styled.h4`
   margin: 10px;
   width: 100%;
   display: flex;
@@ -38,15 +38,15 @@ export default function CustomMD({ data }: { data: string[] }) {
         const message = datum.split('/')[1];
         if (pre === 'title') {
           return (
-            <MDTitle>{message}</MDTitle>
+            <MDTitle key={message}>{message}</MDTitle>
           );
         } if (pre === '·') {
           return (
-            <MDUl>{`· ${message}`}</MDUl>
+            <MDUl key={message}>{`· ${message}`}</MDUl>
           );
         } if (Number.isInteger(Number(pre))) {
           return (
-            <MDOl>{`${pre} ${message}`}</MDOl>
+            <MDOl key={message}>{`${pre} ${message}`}</MDOl>
           );
         }
         return message;

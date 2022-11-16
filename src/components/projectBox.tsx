@@ -1,10 +1,9 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import styled, { CSSProperties } from 'styled-components';
 import { Link } from 'gatsby';
 import { ProjectType } from '../types/projectType';
 
 import CustomMD from './customMd';
-import Loading from './loading';
 
 import github from '../images/tech/Github.svg';
 import velog from '../images/velog.svg';
@@ -92,17 +91,15 @@ const Making = styled.p`
 export default function Work({ data, test }: { data: ProjectType, test:string }) {
   return (
     <Container>
-      <Suspense fallback={<Loading />}>
-        {test && ((test.split('.')[1] === 'mp4') || (test.split('.')[1] === 'webm')
-          ? (
-            <video style={videoStyle} autoPlay loop muted>
-              <source src={test} />
-            </video>
-          )
-          : (
-            <img style={videoStyle} src={test} alt="" />
-          ))}
-      </Suspense>
+      {test && ((test.split('.')[1] === 'mp4') || (test.split('.')[1] === 'webm')
+        ? (
+          <video style={videoStyle} autoPlay loop muted>
+            <source src={test} />
+          </video>
+        )
+        : (
+          <img style={videoStyle} src={test} alt="" />
+        ))}
       <Description>{data.description}</Description>
       <ButtonContainer>
         {data.source
