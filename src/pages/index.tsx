@@ -31,6 +31,15 @@ const FlexBox = styled.div`
   display:flex;
   height: 100%;
 `;
+
+const AvatarContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Avatar = styled.img`
   width: 50%;
   border-radius: 50%;
@@ -48,7 +57,7 @@ const Text = styled.div`
   display:flex;
   width: 100%;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
 `;
 
 const Title = styled.p`
@@ -78,11 +87,9 @@ const Tab = styled.div<{selected:boolean}>`
 
 const itemStyle: CSSProperties = {
   padding: '20px',
+  height: '455px',
+  boxSizing: 'border-box',
   flex: '1',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'column',
   overflowY: 'auto',
 };
 
@@ -160,7 +167,7 @@ function IndexPage() {
         <Content>
           {tab && (tab === 'intro' ? (
             <FlexBox>
-              <div style={itemStyle}><Avatar src={avatar} /></div>
+              <div style={itemStyle}><AvatarContainer><Avatar src={avatar} alt="avatar" /></AvatarContainer></div>
               <div style={itemStyle}>
                 {Object.keys(aboutme[tab]).map((data) => (
                   <Text>
