@@ -21,6 +21,7 @@
     "eslint-import-resolver-typescript": "^3.5.2",
     "gatsby": "^4.24.6",
     "gatsby-cli": "^4.24.0",
+    "gatsby-plugin-google-gtag": "^5.0.0",
     "gatsby-plugin-styled-components": "^5.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gh-pages": "^4.0.0",
