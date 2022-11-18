@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import styled, { CSSProperties } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { ProjectType } from '../types/projectType';
 
@@ -87,6 +87,7 @@ const Making = styled.p`
   margin-top: 50px;
   color: ${({ theme }) => theme.palette.fontColorLight};
 `;
+
 export default function Work({ data, test }: { data: ProjectType, test:string }) {
   return (
     <Container>
