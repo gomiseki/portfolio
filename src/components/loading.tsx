@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import loading from '../images/loadingBook.webm';
 
 const Container = styled.div<{body:boolean}>`
   display: inline-flex;
@@ -18,10 +18,20 @@ const Text = styled.p`
 `;
 
 export default function Loading({ body = false }:{ body?: boolean }) {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allFile {
+        nodes {
+          name
+          publicURL
+        }
+      }
+    }
+  `);
   return (
     <Container body={body}>
       <video autoPlay loop muted>
-        <source src={loading} type="video/webm" />
+        <source src={data.allFile.nodes.find((node:any) => node.name === 'loadingBook').publicURL} type="video/webm" />
       </video>
       <Text>Loading...</Text>
     </Container>
