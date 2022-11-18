@@ -87,6 +87,7 @@ const Making = styled.p`
   margin-top: 50px;
   color: ${({ theme }) => theme.palette.fontColorLight};
 `;
+
 export default function Work({ data, test }: { data: ProjectType, test:string }) {
   return (
     <Container>
