@@ -149,7 +149,8 @@
         "·/바탕화면이 드러나는 의미있는 디자인",
         "·/GatsbyJS를 사용한 json to template 형식의 정적 사이트",
         "·/GraphQl 을 통한 정적 파일의 동적 적재",
-        "·/Github Actions를 활용한 배포 자동화"
+        "·/Github Actions를 활용한 배포 자동화",
+        "./단위 테스트 코드 작성 훈련"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/portfolio",
@@ -161,7 +162,9 @@
         "ReactJS",
         "StyledComponents",
         "GraphQL",
-        "Github"
+        "Github",
+        "Jest",
+        "Testinglibrary"
       ],
       "logo": "portfolio",
       "test": ""

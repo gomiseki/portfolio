@@ -24,7 +24,19 @@ const classify:{[index:string]:any} = {
   version: ['Github', 'Gitlab'],
   deploy: ['AWS', 'Docker'],
   communication: ['Figma', 'Postman'],
+  testing: ['Jest', 'Testinglibrary'],
   etc: ['SocketIO', 'WebRTC', 'RiotAPI'],
+};
+
+const initTotal = {
+  frontend: 0,
+  backend: 0,
+  desktop: 0,
+  communication: 0,
+  version: 0,
+  deploy: 0,
+  testing: 0,
+  etc: 0,
 };
 
 const Container = styled.div`
@@ -201,15 +213,7 @@ function Project() {
   const [selected, setSelected] = useState({ skill: '', project: '' });
   const [techData, setTechData] = useState<{ [index: string]: any }>({});
   const [projectData, setProjectData] = useState<ProjectType[]>([]);
-  const [totalData, setTotalData] = useState<{ [index: string]: any }>({
-    frontend: 0,
-    backend: 0,
-    desktop: 0,
-    etc: 0,
-    communication: 0,
-    version: 0,
-    deploy: 0,
-  });
+  const [totalData, setTotalData] = useState<{ [index: string]: any }>(initTotal);
 
   const onClickSkill = (skill:string) => {
     setSelected({ skill, project: '' });
@@ -223,15 +227,7 @@ function Project() {
     if (data) {
       const techObj:{[index:string]:any} = {};
       const projectArr = selected.skill ? projects.data.filter((project) => project.tech.includes(selected.skill)) : [...projects.data];
-      const totalObj:{[index: string]: any} = {
-        frontend: 0,
-        backend: 0,
-        desktop: 0,
-        etc: 0,
-        communication: 0,
-        version: 0,
-        deploy: 0,
-      };
+      const totalObj: { [index: string]: any } = initTotal;
       const baseTech = selected.project
         ? projects.data.filter((project) => project.name === selected.project).map((value) => value.tech)
         : projects.data.map((value) => value.tech);

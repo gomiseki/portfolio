@@ -22,6 +22,12 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/logo/portfolio.webp', // This path is relative to the root of the site.
+      },
+    },
   ],
 };
 
