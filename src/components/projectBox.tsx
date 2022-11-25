@@ -1,16 +1,15 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { ProjectType } from '../types/projectType';
 
 import CustomMD from './customMd';
-import Loading from './loading';
 
 import github from '../images/tech/Github.svg';
 import velog from '../images/velog.svg';
 import electron from '../images/tech/ElectronJS.svg';
 
-const LazyImages = lazy(() => import('./lazyImages'));
+import LazyImages from './lazyImages';
 
 const Container = styled.div`
   width: 100%;
@@ -91,9 +90,7 @@ const Making = styled.p`
 export default function Work({ data, test }: { data: ProjectType, test:string }) {
   return (
     <Container>
-      <Suspense fallback={<Loading />}>
-        <LazyImages test={test} />
-      </Suspense>
+      <LazyImages test={test} />
       <Description>{data.description}</Description>
       <ButtonContainer>
         {data.source

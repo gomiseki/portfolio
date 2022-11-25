@@ -1,6 +1,15 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const LtoR = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+`;
 
 const Container = styled.div<{body:boolean}>`
   display: inline-flex;
@@ -15,6 +24,11 @@ const Text = styled.p`
   font-weight: bolder;
   margin: 30px;
   color: ${({ theme }) => theme.palette.fontSky};
+`;
+
+const AniText = styled.span<{delay: number}>`
+  animation: ${LtoR} infinite 1s;
+  animation-delay: ${({ delay }) => `0.${delay}s`};
 `;
 
 export default function Loading({ body = false }:{ body?: boolean }) {
@@ -33,7 +47,7 @@ export default function Loading({ body = false }:{ body?: boolean }) {
       <video autoPlay loop muted>
         <source src={data.allFile.nodes.find((node:any) => node.name === 'loadingBook').publicURL} type="video/webm" />
       </video>
-      <Text>Loading...</Text>
+      <Text>{'Loading...'.split('').map((str, index) => <AniText delay={index}>{str}</AniText>)}</Text>
     </Container>
   );
 }
