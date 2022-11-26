@@ -13,12 +13,12 @@ export default function LazyImages({ test }: { test: string }) {
         {isLoading && <Loading />}
         {((test.split('.')[1] === 'mp4') || (test.split('.')[1] === 'webm'))
           ? (
-            <video onLoadedData={() => setIsLoading(false)} style={videoStyle} autoPlay loop muted>
+            <video onLoadedData={() => setIsLoading(false)} style={isLoading ? { display: 'none' } : videoStyle} autoPlay loop muted>
               <source src={test} />
             </video>
           )
           : (
-            <img style={videoStyle} src={test} alt="test" onLoad={() => setIsLoading(false)} />
+            <img style={isLoading ? { display: 'none' } : videoStyle} src={test} alt="test" onLoad={() => setIsLoading(false)} />
           )}
       </>
     );
