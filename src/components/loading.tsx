@@ -13,6 +13,7 @@ const LtoR = keyframes`
 
 const Container = styled.div<{body:boolean}>`
   display: inline-flex;
+  position:absolute;
   width: 100%;
   height: ${({ body }) => (body ? '100vh' : '306px')};
   justify-content: center;
