@@ -163,7 +163,7 @@ function IndexPage() {
             </Tab>
           ))}
         </Nav>
-        <Intro>안녕하세요~ 신입 개발자 Gomi의 포트폴리오 사이트입니다!</Intro>
+        <Intro>국룰수집을 즐기는 개발자 Gomi의 포트폴리오 사이트입니다!</Intro>
         <Content>
           {tab && (tab === 'intro' ? (
             <FlexBox>
