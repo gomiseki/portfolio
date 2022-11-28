@@ -18,13 +18,13 @@ const Intro = styled.div`
   font-size: x-large;
   font-weight: bolder;
   color: ${({ theme }) => theme.palette.fontSky};
-  height: 50px;
+  height: 100px;
 `;
 
 const Content = styled.div`
   box-sizing: border-box;
-  height: 565px;
-  padding: 20px 50px 50px 50px;
+  height: 515px;
+  padding: 20px 50px 80px 50px;
 `;
 
 const FlexBox = styled.div`
@@ -61,7 +61,7 @@ const Text = styled.div`
 `;
 
 const Title = styled.p`
-  flex:2;
+  flex:4;
   font-size:x-large;
   justify-self: flex-end;
   font-weight: bold;
@@ -87,10 +87,11 @@ const Tab = styled.div<{selected:boolean}>`
 
 const itemStyle: CSSProperties = {
   padding: '20px',
-  height: '455px',
+  height: '375px',
   boxSizing: 'border-box',
-  flex: '1',
-  overflowY: 'auto',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
 };
 
 const EduContainer = styled.div`
@@ -128,12 +129,12 @@ const Name = styled.div`
   align-items: flex-end;
   font-size: x-large;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 10px 0;
   color: ${({ theme }) => theme.palette.fontSky};
 `;
 
 const Major = styled.div`
-  margin: 20px 0;
+  margin: 10px 0;
   flex:1;
   display: flex;
   align-items: flex-start;
@@ -141,6 +142,78 @@ const Major = styled.div`
   font-weight: bold;
   color: ${({ theme }) => theme.palette.fontColorLight};
 `;
+
+const IntroContainer = styled.div`
+  height: 100%;
+  padding: 10px 150px;
+  margin: auto;
+  height: 100%;
+  overflow: auto;
+`;
+
+const Slogan = styled.p`
+  color: ${({ theme }) => theme.palette.fontColor};
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 50px;
+`;
+
+const MyType = styled.li`
+  line-height: 50px;
+  color: ${({ theme }) => theme.palette.fontColorLight};
+  font-size: large;
+  font-weight: bolder;
+`;
+
+function ContentRoute({ tabName }:{tabName:string}) {
+  if (tabName === 'profile') {
+    return (
+      <FlexBox>
+        <div style={{ ...itemStyle, flex: '3' }}><AvatarContainer><Avatar src={avatar} alt="avatar" /></AvatarContainer></div>
+        <div style={{ ...itemStyle, flex: '5' }}>
+          {Object.keys(aboutme[tabName]).map((data) => (
+            <Text key={data}>
+              {data !== 'Comment' && <Title>{data}</Title>}
+              {
+              // @ts-ignore
+                <Comment dangerouslySetInnerHTML={{ __html: aboutme[tabName][data] }} />
+            }
+            </Text>
+          ))}
+        </div>
+      </FlexBox>
+    );
+  }
+  if (tabName === 'timeline') {
+    return (
+      <EduContainer>
+        {aboutme.timeline.map((data) => (
+          <Edu key={data.name}>
+            <Period>{data.period}</Period>
+            <School>
+              <Name>{data.name}</Name>
+              <Major>{data.major}</Major>
+            </School>
+          </Edu>
+        ))}
+      </EduContainer>
+    );
+  }
+  if (tabName === 'introduce') {
+    const data = aboutme.introduce;
+    return (
+      <IntroContainer>
+        <Slogan>{data.slogan}</Slogan>
+        <Slogan>저는...</Slogan>
+        <ul style={{ listStyleType: 'circle', color: 'white', padding: '0 20px 40px 20px' }}>
+          {data.myType.map((datum) => <MyType>{datum}</MyType>)}
+        </ul>
+        <Comment dangerouslySetInnerHTML={{ __html: data.comment }} />
+      </IntroContainer>
+    );
+  }
+  return null;
+}
 
 function IndexPage() {
   const [tab, setTab] = useState('');
@@ -165,34 +238,7 @@ function IndexPage() {
         </Nav>
         <Intro>국룰수집을 즐기는 개발자 Gomi의 포트폴리오 사이트입니다!</Intro>
         <Content>
-          {tab && (tab === 'intro' ? (
-            <FlexBox>
-              <div style={itemStyle}><AvatarContainer><Avatar src={avatar} alt="avatar" /></AvatarContainer></div>
-              <div style={itemStyle}>
-                {Object.keys(aboutme[tab]).map((data) => (
-                  <Text key={data}>
-                    {data !== 'Comment' && <Title>{data}</Title>}
-                    {
-                    // @ts-ignore
-                      <Comment dangerouslySetInnerHTML={{ __html: aboutme[tab][data] }} />
-                    }
-                  </Text>
-                ))}
-              </div>
-            </FlexBox>
-          ) : (
-            <EduContainer>
-              {aboutme.timeline.map((data) => (
-                <Edu key={data.name}>
-                  <Period>{data.period}</Period>
-                  <School>
-                    <Name>{data.name}</Name>
-                    <Major>{data.major}</Major>
-                  </School>
-                </Edu>
-              ))}
-            </EduContainer>
-          ))}
+          {tab && <ContentRoute tabName={tab} />}
         </Content>
       </Container>
     </Layout>

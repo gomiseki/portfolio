@@ -97,7 +97,6 @@
         "Docker",
         "Vite",
         "Recoil",
-        "ReactQuery",
         "Gitlab",
         "Figma",
         "Postman",
@@ -160,7 +159,6 @@
         "Typescript",
         "ReactJS",
         "StyledComponents",
-        "GraphQL",
         "Github"
       ],
       "logo": "portfolio",
