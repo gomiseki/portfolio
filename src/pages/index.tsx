@@ -199,8 +199,8 @@ function ContentRoute({ tabName }:{tabName:string}) {
       </EduContainer>
     );
   }
-  if (tabName === 'introduce') {
-    const data = aboutme.introduce;
+  if (tabName === 'intro') {
+    const data = aboutme.intro;
     return (
       <IntroContainer>
         <Slogan>{data.slogan}</Slogan>
