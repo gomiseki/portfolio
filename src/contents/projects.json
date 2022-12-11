@@ -74,14 +74,15 @@
         "3/Admin Page 제작",
         "4/채팅 구현",
         "·/Socket.io-client 모듈을 사용한 채팅구현",
-        "·/Context API로 소켓 객체 전역관리",
+        "·/채널톡 디자인과 유사한 페이지 접속자 간의 채팅",
+        "·/Recoil의 소켓 객체 저장 이슈로 Context API를 통한 소켓 객체 관리",
         "5/프론트엔드 이미지 빌드",
         "·/Dockerfile 및 nginx conf 세팅(ssl)"
       ],
       "experience": [
         "title/서버 개발자들과 다양한 소통을 경험하려 노력했습니다.",
-        "·/API 문서 작성",
-        "·/Git Flow 구축",
+        "·/API 문서 피드백",
+        "·/Git Flow 전략 수립",
         "·/팀 평가 최고점 기록(코드품질)"
       ],
       "team": "김주현 외 4명",
@@ -116,9 +117,9 @@
         "·/Redux의 낮은 플랫폼 의존성을 활용하여 애플리케이션 윈도우(프로세스)간 전역 상태 관리 시스템을 구축",
         "·/TypeScript를 활용한 복잡성이 높은 api 데이터 스키마에 대한 안정적인 처리",
         "·/대량 Promise의 안정적 처리",
-        "·/프로그램 제작 중 프로그램의 사형선고",
-        "·/LCU 및 Riot API를 사용한 게임 데이터를 분석",
-        "·/SVG 도넛 차트를 통한 시각화를 제공"
+        "·/LCU(game client socketAPI) 및 Riot API를 사용한 게임 데이터를 분석",
+        "·/SVG 도넛 차트를 통한 시각화를 제공",
+        "·/프로그램 제작 중 프로그램의 사형선고"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/Dodge-Alarm",
