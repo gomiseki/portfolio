@@ -1,32 +1,6 @@
 {
   "data": [
     {
-      "name": "YTB-Recoder",
-      "period": "2022",
-      "description": "유튜브에서 레코딩을 할 수 있는 크롬 익스텐션 앱",
-      "role": [
-        "title/제작 총괄"
-      ],
-      "experience": [
-        "·/Vanilla JS로 구현된 앱을 ReactJS기반으로 리팩토링",
-        "·/크롬 익스텐션 앱 제작",
-        "·/mediaStream객체, getUsermedia, mediaCapture 등 WEB API학습"
-      ],
-      "team": "개인",
-      "source": "https://github.com/gomiseki/YTB-Recorder",
-      "archive": "https://velog.io/@gomiseki/Youtube-Recorder-rebuild-%E3%85%A0%E3%85%A0",
-      "download": "",
-      "tech": [
-        "ReactJS",
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Github"
-      ],
-      "logo": "record",
-      "test": "ytrecordertest"
-    },
-    {
       "name": "B-singroom",
       "period": "2021~2022",
       "description": "유튜브 플레이 리스트를 공유하는 음성, 문자채팅 데스크톱 앱",
@@ -164,6 +138,32 @@
       ],
       "logo": "portfolio",
       "test": ""
+    },
+    {
+      "name": "YTB-Recoder",
+      "period": "2022",
+      "description": "유튜브에서 레코딩을 할 수 있는 크롬 익스텐션 앱",
+      "role": [
+        "title/제작 총괄"
+      ],
+      "experience": [
+        "·/Vanilla JS로 구현된 앱을 ReactJS기반으로 리팩토링",
+        "·/크롬 익스텐션 앱 제작",
+        "·/mediaStream객체, getUsermedia, mediaCapture 등 WEB API학습"
+      ],
+      "team": "개인",
+      "source": "https://github.com/gomiseki/YTB-Recorder",
+      "archive": "https://velog.io/@gomiseki/Youtube-Recorder-rebuild-%E3%85%A0%E3%85%A0",
+      "download": "",
+      "tech": [
+        "ReactJS",
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Github"
+      ],
+      "logo": "record",
+      "test": "ytrecordertest"
     }
   ]
 }
