@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
   body{
     background-image: url(${background});
+    background-size: cover;
   }
   a{
     text-decoration: none;
