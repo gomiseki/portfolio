@@ -9,11 +9,11 @@
       ],
       "experience": [
         "·/Redux의 낮은 플랫폼 의존성을 활용하여 애플리케이션 윈도우(프로세스)간 전역 상태 관리 시스템을 구축",
-        "·/TypeScript를 활용한 복잡성이 높은 api 데이터 스키마에 대한 안정적인 처리",
-        "·/대량 Promise의 안정적 처리",
-        "·/LCU(game client socketAPI) 및 Riot API를 사용하여 게임 데이터를 분석",
-        "·/SVG 도넛 차트를 통한 시각화를 제공",
-        "·/프로그램 제작 중 프로그램의 사형선고"
+        "·/TypeScript를 활용해 복잡성이 높은 API 데이터 스키마를 안정적으로 처리함",
+        "·/Promise를 재귀적으로 호출하여 API 에러에 대응",
+        "·/LCU(game client socketAPI)및 Riot API를 사용하여 게임 데이터 분석",
+        "·/SVG 도넛 차트를 통한 전적 데이터 시각화 제공",
+        "·/Riot 게임사의 일방적인 API 지원 중단으로 프로그램 제작 중 프로그램의 사형선고"
       ],
       "team": "개인",
       "source": "https://github.com/gomiseki/Dodge-Alarm",
@@ -45,19 +45,18 @@
         "2/Github OAuth Page 구현",
         "·/new window 방식 로그인 구현",
         "·/expire기간에 따른 자동 로그아웃",
-        "·/recoil을 통한 전역 커스텀 훅",
+        "·/Recoil을 통한 전역 커스텀 훅",
         "3/Admin Page 제작",
         "4/채팅 구현",
         "·/Socket.io-client 모듈을 사용한 채팅구현",
-        "·/채널톡 디자인과 유사한 페이지 접속자 간의 채팅",
+        "·/해피톡 디자인과 유사한 페이지 접속자 간의 채팅",
         "·/Recoil의 소켓 객체 저장 이슈로 Context API를 통한 소켓 객체 관리",
         "5/프론트엔드 이미지 빌드",
         "·/Dockerfile 및 nginx conf 세팅(ssl)"
       ],
       "experience": [
-        "title/서버 개발자들과 다양한 소통을 경험하려 노력했습니다.",
-        "·/API 문서 피드백",
-        "·/Git Flow 전략 수립",
+        "title/서버 개발자와의 협업",
+        "·/[Postman 문서](https://documenter.getpostman.com/view/18759067/UzJJsGkX)를 통한 소통 및 피드백 제공",
         "·/팀 평가 최고점 기록(코드품질)"
       ],
       "team": "김주현 외 4명",
@@ -92,8 +91,9 @@
       ],
       "experience": [
         "·/「소프트웨어 공학」교과목의 과제로 단기간 다수 스택 학습",
-        "·/크로스 브라우징 및 장치권한 제어 리스크를 줄이기 위해 Electron 채택",
-        "·/소켓 프로그래밍부터 WebRTC까지 클라이언트와 서버코드를 총괄"
+        "·/Electron을 통해 일관된 브라우저를 제공, WebRTC의 크로스 브라우징 이슈를 해결함",
+        "·/팀원들의 작업을 취합하고 코드를 리뷰하는 프로젝트 매니징을 수행하며 팀원들의 도메인 지식 학습을 리드함",
+        "·/수업 이후 도메인 지식을 보강하여 [클라이언트 코드 리팩토링](https://github.com/HUFS-SWE/BsingroomRemaster)을 진행, 코드 스플리팅 및 부족한 구현(음량조절, input 장치 세팅 등)을 보완함"
       ],
       "team": "김주현 외 4명",
       "source": "https://github.com/HUFS-SWE",
