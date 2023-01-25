@@ -10,32 +10,59 @@
     {
       "name":"🎓 한국외국어대학교",
       "major": "터키·아제르바이잔어 / SW Engineering",
-      "period": "2015~"
+      "period": "2015~",
+      "description":[
+        "·/2023 졸업예정"
+      ],
+      "picture": "hufs"
     },
     {
       "name": "🎖️ 군 입대",
       "major": "육군 21사단 만기전역",
-      "period": "2016~2018"
+      "period": "2016~2018",
+      "description": [
+        "·/양구는 너무 추워요..."
+      ],
+      "picture": "military"
     },
     {
       "name": "교내 창업 동아리",
       "major": "HUVE",
-      "period": "2018~2019"
+      "period": "2018~2019",
+      "description": [
+        "·/직접 IT 서비스를 만들고싶다 다짐하다."
+      ],
+      "picture": "huve"
     },
     {
       "name": "터키 교환학생",
-      "major": "Hacettepe Üniversitesi Bilgisayar Mühendisliği(Computer Engineering)",
-      "period": "2019"
+      "major": "Hacettepe Üniversitesi",
+      "period": "2019",
+      "description": [
+        "·/터키 대학교는 도서관에 개들이 살아요",
+        "·/Python 프로그래밍과 자료구조 수업 수강"
+      ],
+      "picture": "hacettepe"
     },
     {
       "name": "IT 동아리",
       "major": "멋쟁이 사자처럼",
-      "period": "2020"
+      "period": "2020",
+      "description": [
+        "·/파이썬 웹 프레임워크인 Django 학습",
+        "·/[알고리즘 스터디](https://github.com/Likelion-Algorithm/AlgoStudy) 운영 등의 활동"
+      ],
+      "picture": "동아리"
     },
     {
       "name": "💻 엘리스 (KDT)",
       "major": "SW Engineer Track",
-      "period": "2022.04 ~ 2022.07"
+      "period": "2022.04 ~ 2022.07",
+      "description": [
+        "·/프론트엔드(HTML, CSS, JS, TS, React) 및 백엔드(Express, MongoDB를 통한 기본적인 CRUD 구현 가능)학습",
+        "·/[알고리즘 스터디](https://enchanting-land-c26.notion.site/dce63ecfe1db4697b6219b914c271049) 및 [프로젝트 스터디](https://github.com/FE-CheckList-Gallery) 운영"
+      ],
+      "picture": "elice"
     }
   ],
   "intro":{
