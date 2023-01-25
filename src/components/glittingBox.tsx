@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Conatiner = styled.div<{over:boolean}>`
   padding: 2px;
   border: 1px solid ${({ theme }) => theme.palette.borderDark};
-  background-color: ${({ over, theme }) => over && theme.palette.fontColorLight};
-  opacity: ${({ over }) => (over ? 1 : 0.8)};
+  opacity: ${({ over }) => (over ? '1' : '0.8')};
+  background-color: ${({ theme, over }) => over && theme.palette.fontColorLight};
+  &:hover{
+    opacity: 1;
+    background-color: ${({ theme }) => theme.palette.fontColorLight};
+  }
 `;
 
-export default function GlittingBox({ children }:{children: React.ReactNode}) {
-  const [over, setOver] = useState(false);
-
+export default function GlittingBox({ children, init = false }:
+  {children: React.ReactNode, init?:boolean}) {
   return (
-    <Conatiner
-      over={over}
-      onMouseOver={() => setOver(true)}
-      onMouseLeave={() => setOver(false)}
-    >
+    <Conatiner over={init}>
       {children}
     </Conatiner>
   );
 }
+
+GlittingBox.defaultProps = {
+  init: false,
+};

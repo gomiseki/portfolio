@@ -7,6 +7,7 @@ import aboutme from '../contents/aboutme.json';
 import avatar from '../images/profile.webp';
 
 import SEO from '../components/seo';
+import HorizontalSlider from '../components/horizontalSlider';
 
 const Container = styled.div`
 `;
@@ -117,32 +118,6 @@ const Period = styled.div`
   color: ${({ theme }) => theme.palette.fontColorLight};
 `;
 
-const School = styled.div`
-  flex:1;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Name = styled.div`
-  flex:1;
-  display: flex;
-  align-items: flex-end;
-  font-size: x-large;
-  font-weight: bold;
-  margin: 10px 0;
-  color: ${({ theme }) => theme.palette.fontSky};
-`;
-
-const Major = styled.div`
-  margin: 10px 0;
-  flex:1;
-  display: flex;
-  align-items: flex-start;
-  font-size: large;
-  font-weight: bold;
-  color: ${({ theme }) => theme.palette.fontColorLight};
-`;
-
 const IntroContainer = styled.div`
   height: 100%;
   padding: 10px 150px;
@@ -187,15 +162,7 @@ function ContentRoute({ tabName }:{tabName:string}) {
   if (tabName === 'timeline') {
     return (
       <EduContainer>
-        {aboutme.timeline.map((data) => (
-          <Edu key={data.name}>
-            <Period>{data.period}</Period>
-            <School>
-              <Name>{data.name}</Name>
-              <Major>{data.major}</Major>
-            </School>
-          </Edu>
-        ))}
+        <HorizontalSlider timeline={aboutme.timeline} />
       </EduContainer>
     );
   }
